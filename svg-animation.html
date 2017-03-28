@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Pull in these plugins and libraries -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenLite.min.js"></script>
+		<script src="js/TimelineLite.js"></script> 
+		<script src="js/TimelineMax.js"></script>
+		<script src="js/ScrollMagic.js"></script>
+		<script src="js/jquery.ScrollMagic.js"></script>
+		<script src="js/animation.gsap.js"></script>
+		<script src="js/ScrollToPlugin.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<section class="sanimation">
+				<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="1406px" height="753.5px" viewBox="0 0 1406 753.5" style="enable-background:new 0 0 1406 753.5;" xml:space="preserve">
+					<path stroke="#BB0F01" width="1000px" height="1000px" id="st0" class="st0" stroke-width="1" d="M  201.9,33.5 201.9,255.7 409.8,348.5 1370.9,348.5 1370.9,600.5 467.4,600.5 334.9,665.7 334.9,706.5 334.9,706.5 334.9,665.7 467.4,600.5 1370.9,600.5 1370.9,348.5 409.8,348.5 201.9,255.7z " stroke-dasharray="7000px"/>
+				</svg>
+		</section>
+		<script>
+			jQuery(function() {
+				// Init Controller
+				var controller = new ScrollMagic.Controller();
+		
+			var tween = TweenMax.fromTo('#st0', 0.5, {
+				strokeDashoffset:11000,
+			},{
+				strokeDashoffset:4000,
+			});
+			
+			var scene = new ScrollMagic.Scene({
+				triggerElement: '#Layer_1',
+				offset:0,
+				duration: 1000 /* How many pixels to scroll / animate */
+			})
+			.setTween(tween)
+			.addTo(controller);
+		});
+		
+		
+		</script>
+	</body>
+</html>
