@@ -1,2 +1,2 @@
 # svg-animation
-Dasharray svg animation using jQuery, GSAP and ScrollMagic
+Dasharray svg animation using jQuery, GSAP and ScrollMagic.
